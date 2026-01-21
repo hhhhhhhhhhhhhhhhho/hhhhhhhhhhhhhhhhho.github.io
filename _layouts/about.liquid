@@ -40,6 +40,44 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Work Experience -->
+    {% if page.work_experience and page.work_experience.enabled %}
+      <h2>
+        <a href="{{ '/cv/' | relative_url }}" style="color: inherit">work experience</a>
+      </h2>
+      <div class="work-experience">
+        {% assign work_limit = page.work_experience.limit | default: 5 %}
+        {% for job in site.data.resume.work limit: work_limit %}
+          <div class="work-item mb-3 p-3" style="border-left: 3px solid var(--global-theme-color); background: var(--global-bg-color); border-radius: 0 8px 8px 0;">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h4 class="mb-1" style="color: var(--global-theme-color);">{{ job.position }}</h4>
+                <p class="mb-1"><strong>{{ job.name }}</strong></p>
+              </div>
+              <span class="badge" style="background: var(--global-theme-color); color: white; font-size: 0.8rem;">
+                {% assign start_year = job.startDate | slice: 0, 4 %}
+                {% assign start_month = job.startDate | slice: 5, 2 %}
+                {% if job.endDate == "" or job.endDate == nil %}
+                  {{ start_year }}.{{ start_month }} - Present
+                {% else %}
+                  {% assign end_year = job.endDate | slice: 0, 4 %}
+                  {% assign end_month = job.endDate | slice: 5, 2 %}
+                  {{ start_year }}.{{ start_month }} - {{ end_year }}.{{ end_month }}
+                {% endif %}
+              </span>
+            </div>
+            {% if job.highlights.size > 0 %}
+              <ul class="mt-2 mb-0" style="padding-left: 1.2rem;">
+                {% for highlight in job.highlights limit: 2 %}
+                  <li style="font-size: 0.9rem;">{{ highlight }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>

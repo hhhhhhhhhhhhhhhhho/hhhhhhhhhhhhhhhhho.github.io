@@ -2,96 +2,85 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Tae Jeong Park (박태정)
+    - name: Email
+      value: xowjdpk@gmail.com
     - name: Languages
-      value: English, German
-
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+      value: Korean (Native), English
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: LLM Engineer
+      institution: NHN KCP
+      year: 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - VLM-based customer service automation for PG systems
+        - LLM-based internal automation solutions
+    - title: LLM Engineer
+      institution: Docenty
+      year: 2024 - 2025
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - RAG and Agent-based workflow automation
+        - Customer pain point analysis → PoC → Production deployment
+    - title: LLM Engineer
+      institution: ComNHuman
+      year: 2024
       description:
+        - LLM-based enterprise automation solutions
+        - Chain → Agent (LangGraph) architecture migration
+    - title: AI Data Engineer / Software Developer
+      institution: Republic of Korea Army
+      year: 2022 - 2025
+      description:
+        - Built speech recognition AI data pipelines for military applications
+        - Whisper fine-tuning (CER 72% → 13% improvement)
+        - C# based military command system development (Front/Back-end)
+        - Memory leak analysis and resolution
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: LLM & AI
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Whisper Fine-tuning, vLLM Serving, RAG Architecture
+        - LangGraph Agents, ReAct Agents, VLM Integration
+    - title: ML & Data
       items:
-        - Description 1.
-        - Description 2.
+        - LSTM AutoEncoder, CNN-based Adversarial Defense
+        - Anomaly Detection (F1 95.21%), Time-series Analysis
+    - title: Backend & Infra
+      items:
+        - FastAPI, Oracle/MySQL/PostgreSQL/MongoDB
+        - Milvus, Pinecone, GCP, RunPod
+    - title: Languages
+      items:
+        - Python, C#, Java
 
-- title: Other Interests
+- title: Publications
+  type: time_table
+  contents:
+    - title: Adversarial Attack Defense using CNN AutoEncoder
+      year: 2024
+      description: First Author - Defense mechanism against adversarial attacks
+    - title: Network Anomaly Detection Model Comparison
+      year: 2024
+      description: First Author - Comparative study of anomaly detection approaches
+
+- title: Achievements
+  type: time_table
+  contents:
+    - year: 2024
+      items:
+        - MQL Sales Prediction Model - Accuracy 0.76 (Top 6% in competition)
+        - OpenWebUI Documentation Contribution (vLLM Usage)
+    - year: 2023
+      items:
+        - Whisper ASR Fine-tuning - CER improvement from 72% to 13%
+        - LSTM AutoEncoder Anomaly Detection - F1 Score 95.21%
+
+- title: Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Technical:</u> LLM System Design, Performance Optimization, Workflow Automation, Anomaly Detection
+    - <u>Focus:</u> Production-grade AI systems, Real-world deployment challenges
